@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="overview.html">
+<link rel="prev" href="wrangling.html">
+<link rel="next" href="collaborate.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -257,69 +257,106 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Collaborative, Reproducible Science</h1>
-<h4 class="author"><em>Ocean Health Index Team</em></h4>
-<h4 class="date"><em>2017-09-07</em></h4>
+<div id="rmarkdown" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Analysis with RMarkdown</h1>
+<div id="objectives-resources-3" class="section level2">
+<h2><span class="header-section-number">8.1</span> Objectives &amp; Resources</h2>
+<ul>
+<li>intro to Markdown</li>
+<li>intro to RMarkdown</li>
+<li>more practice with GitHub</li>
+<li>more practice with tidyverse</li>
+</ul>
+<div class="figure">
+<img src="img/practicalDev_changingstuff.jpg" />
+
 </div>
-<div id="home" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Home</h1>
-<p><strong>Welcome.</strong></p>
-<p>It’s an experiment; teaching you coding and version control together.</p>
-<p>I’ve learned an enormous amount about coding and teaching how to code from these resources: - R for Data Science: Wickham and Grolemund - Jenny Bryan - SWC - DC</p>
-<p>All open source.</p>
-<p><strong>This training program is under active development and testing</strong></p>
-<p>This is going to be fun. Learning to code is empowering… This 2-day workshop will leach what we use for the OHI, as described in our nature paper. It will teach you skills and a workflows that you can use in any research and analysis.</p>
-<p>Make sure you read <a href="overview.html#overview">2</a>.</p>
-<p>Suggested breakdown for a 2-day workshop:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">time</th>
-<th align="right">Day 1</th>
-<th align="right">Day 2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">9-10:30</td>
-<td align="right">Motivation, R and RStudio</td>
-<td align="right">more analysis with RMarkdown</td>
-</tr>
-<tr class="even">
-<td align="left">break</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="left">11-12:30</td>
-<td align="right">GitHub, scripting in R</td>
-<td align="right">more analysis with RMarkdown</td>
-</tr>
-<tr class="even">
-<td align="left">lunch</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="left">13:30-15:00</td>
-<td align="right">analysis: visualization</td>
-<td align="right">collaboration with GitHub</td>
-</tr>
-<tr class="even">
-<td align="left">break</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="left">15:30-17:00</td>
-<td align="right">analysis: data wrangling</td>
-<td align="right">More R poweR</td>
-</tr>
-</tbody>
-</table>
-<div id="todo-license" class="section level2">
-<h2><span class="header-section-number">1.1</span> TODO License</h2>
+<p>See <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown · GitHub Guides</a> and add some more personalized content to the README of your own, like a bulleted list or blockquote. For on the fly rendering, the <a href="https://atom.io/">atom</a> text editor is good.</p>
+</div>
+<div id="intro-to-markdown" class="section level2">
+<h2><span class="header-section-number">8.2</span> Intro to Markdown</h2>
+<div id="from-github.com" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> from GitHub.com</h3>
+<p>Let’s learn markdown by editing the <code>README.md</code> on github.com for convenience. A README.md file can be added to every folder in a repository, and they are automatically displayed when the repository is opened on github.com</p>
+<p>The <code>README.md</code> is in <strong>markdown</strong>, simple syntax for conversion to HTML. <code>.md</code> is a kind of text file, so you only need a text editor to read it. If you were editing this on your computer, you could do this right in RStudio, which has a built-in text editor. (You could also do it in another text editor program, but RStudio is convenient). Copy-paste the following into your <code>README.md</code>:</p>
+<pre><code># my-project
+
+This project is based on [Collaborative, Reproducible Science training ](https://ohi-science.org/data-science-training/).
+
+## Introduction
+
+Markdown syntax changes plain text to **bold** and *italics*:
+
+1. **Git**
+1. **Github**
+1. *Markdown*
+1. *Rmarkdown*
+
+## Conclusion
+
+![](https://octodex.github.com/images/labtocat.png)
+</code></pre>
+<p>Notice the syntax for:</p>
+<ul>
+<li><strong>headers</strong> get rendered at multiple levels: <code>#</code>, <code>##</code></li>
+<li><strong>link</strong>: <code>[](http://...)</code></li>
+<li><strong>image</strong>: <code>![](http://...)</code> — note the <code>!</code></li>
+<li><em>italics</em>: <code>*word*</code></li>
+<li><strong>bold</strong>: <code>**word**</code></li>
+<li><strong>numbered list</strong> gets automatically sequenced: <code>1.</code>, <code>1.</code></li>
+</ul>
+</div>
+<div id="from-rstudio" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> from RStudio</h3>
+<p>Let’s go back to RStudio. Pull so that you have the most recent version of your README locally. Let’s open it and have a look. Documentation is a really important part of coding, so let’s look at the README. If we look at GitHub.com, you can see that the README is displayed nicely like online. Let’s add some more description about what our GitHub repository is for.</p>
+<p>Now click on the Preview button to see the markdown rendered as HTML.</p>
+<p>Let’s change the image to the plot we made yesterday.</p>
+<p><code>![](my_plot.png)</code></p>
+<p>There are some good <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">cheatsheets</a> to get you started, and here is one built into RStudio: <br /> <br /></p>
+<div class="figure">
+<img src="img/md_cheatsheet.png" />
+
+</div>
+<p>knit with the button; also <code>knitr</code></p>
+</div>
+<div id="your-turn-5" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> Your turn</h3>
+<p>Update the README, push to GitHub</p>
+</div>
+</div>
+<div id="rmarkdown-from-rstudio" class="section level2">
+<h2><span class="header-section-number">8.3</span> RMarkdown from RStudio</h2>
+<p>Back in RStudio, let’s create a new Rmarkdown file, which allows us to weave markdown text with chunks of R code to be evaluated and output content like tables and plots.</p>
+<p>File -&gt; New File -&gt; Rmarkdown… -&gt; Document of output format HTML, OK.</p>
+<img src="img/rstudio_new-rmd-doc-html.png" width="300"/>
+<p>You can give it a Title of “My Project”. After you click OK, most importantly File -&gt; Save as <code>index</code> (which will get named with the filename extension <code>index.Rmd</code>).</p>
+<p>Some initial text is already provided for you. Let’s go ahead and “Knit HTML”.</p>
+<p>Notice how the markdown is rendered similar to as before + <strong>R code chunks</strong> are surrounded by 3 backticks and <code>{r LABEL}</code>. These are evaluated and return the output text in the case of <code>summary(cars)</code> and the output plot in the case of <code>plot(pressure)</code>.</p>
+<p>Notice how the code <code>plot(pressure)</code> is not shown in the HTML output because of the R code chunk option <code>echo=FALSE</code>.</p>
+<p><strong>Before we continue exploring Rmarkdown</strong>, let’s sync this the .rmd and .html to github.com. Enter a message like “added index” and click on “Commit and Sync gh-pages”. This will update <a href="https://github.com/USER/my-project" class="uri">https://github.com/USER/my-project</a>, and now you can also see your project website with a default <code>index.html</code> viewable at <a href="http://USER.github.io/my-project" class="uri">http://USER.github.io/my-project</a></p>
+<div id="your-turn-6" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Your turn</h3>
+</div>
+</div>
+<div id="resources" class="section level2">
+<h2><span class="header-section-number">8.4</span> Resources</h2>
+<p>Were you hoping for an RStudio Cheatsheet? Here it is:</p>
+<ul>
+<li><a href="http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">rmarkdown-cheatsheet.pdf</a></li>
+<li><a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a></li>
+<li><a href="http://kbroman.org/knitr_knutshell/">knitr in a knutshell - Karl Broman</a></li>
+</ul>
+<p>save, commit, push</p>
+</div>
+<div id="more-practice-data-wrangling-data-viz" class="section level2">
+<h2><span class="header-section-number">8.5</span> More practice data wrangling, data viz</h2>
+<p>let’s do it from our RMarkdown now</p>
+<div id="your-turn-7" class="section level3">
+<h3><span class="header-section-number">8.5.1</span> Your turn</h3>
+</div>
+</div>
+<div id="troubleshooting-4" class="section level2">
+<h2><span class="header-section-number">8.6</span> Troubleshooting</h2>
 
 </div>
 </div>
@@ -328,8 +365,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="wrangling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="collaborate.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

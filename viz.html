@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="overview.html">
+<link rel="prev" href="github-rstudio.html">
+<link rel="next" href="wrangling.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -257,69 +257,57 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Collaborative, Reproducible Science</h1>
-<h4 class="author"><em>Ocean Health Index Team</em></h4>
-<h4 class="date"><em>2017-09-07</em></h4>
+<div id="viz" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> R and RStudio through Data Visualization</h1>
+<p><strong>In development.</strong></p>
+<div id="objectives-resources-2" class="section level2">
+<h2><span class="header-section-number">6.1</span> Objectives &amp; Resources</h2>
+<ul>
+<li>learn ggplot2 with <code>mpg</code> dataframe</li>
+<li>practice writing script</li>
+</ul>
+<p>Why do we start with data viz? Not only is data viz a big part of analysis, it’s a way to SEE your progress as you learn to code.</p>
+<ul>
+<li><p>Conceptual and building, cheatsheet images</p></li>
+<li><a href="http://r4ds.had.co.nz/data-visualisation.html" class="uri">http://r4ds.had.co.nz/data-visualisation.html</a></li>
+<li><p><a href="https://pdfs.semanticscholar.org/d779/6f85dabccd18673f382c100fc06f55e8b501.pdf" class="uri">https://pdfs.semanticscholar.org/d779/6f85dabccd18673f382c100fc06f55e8b501.pdf</a></p></li>
+<li><a href="../cheatsheets/ggplot2-cheatsheet-2.0.pdf">ggplot2-cheatsheet-2.0.pdf</a></li>
+<li><a href="http://ucsb-bren.github.io/env-info/wk06_widgets.html">Interactive Plots and Maps - Environmental Informatics</a></li>
+<li><a href="http://www.cookbook-r.com/Graphs/#graphs-with-ggplot2">Graphs with ggplot2 - Cookbook for R</a></li>
+<li><p><a href="http://www.sthda.com/english/wiki/ggplot2-essentials">ggplot2 Essentials - STHDA</a></p></li>
+</ul>
+<p>TODO: Draw heavily from <a href="http://r4ds.had.co.nz/data-visualisation.html" class="uri">http://r4ds.had.co.nz/data-visualisation.html</a>;</p>
 </div>
-<div id="home" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Home</h1>
-<p><strong>Welcome.</strong></p>
-<p>It’s an experiment; teaching you coding and version control together.</p>
-<p>I’ve learned an enormous amount about coding and teaching how to code from these resources: - R for Data Science: Wickham and Grolemund - Jenny Bryan - SWC - DC</p>
-<p>All open source.</p>
-<p><strong>This training program is under active development and testing</strong></p>
-<p>This is going to be fun. Learning to code is empowering… This 2-day workshop will leach what we use for the OHI, as described in our nature paper. It will teach you skills and a workflows that you can use in any research and analysis.</p>
-<p>Make sure you read <a href="overview.html#overview">2</a>.</p>
-<p>Suggested breakdown for a 2-day workshop:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">time</th>
-<th align="right">Day 1</th>
-<th align="right">Day 2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">9-10:30</td>
-<td align="right">Motivation, R and RStudio</td>
-<td align="right">more analysis with RMarkdown</td>
-</tr>
-<tr class="even">
-<td align="left">break</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="left">11-12:30</td>
-<td align="right">GitHub, scripting in R</td>
-<td align="right">more analysis with RMarkdown</td>
-</tr>
-<tr class="even">
-<td align="left">lunch</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="left">13:30-15:00</td>
-<td align="right">analysis: visualization</td>
-<td align="right">collaboration with GitHub</td>
-</tr>
-<tr class="even">
-<td align="left">break</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="left">15:30-17:00</td>
-<td align="right">analysis: data wrangling</td>
-<td align="right">More R poweR</td>
-</tr>
-</tbody>
-</table>
-<div id="todo-license" class="section level2">
-<h2><span class="header-section-number">1.1</span> TODO License</h2>
+<div id="install-our-first-package-ggplot2" class="section level2">
+<h2><span class="header-section-number">6.2</span> Install our first package: <code>ggplot2</code></h2>
+</div>
+<div id="first-steps" class="section level2">
+<h2><span class="header-section-number">6.3</span> First Steps</h2>
+</div>
+<div id="aesthetic-mappings" class="section level2">
+<h2><span class="header-section-number">6.4</span> Aesthetic mappings</h2>
+<div id="your-turn-2" class="section level3">
+<h3><span class="header-section-number">6.4.1</span> Your turn</h3>
+</div>
+</div>
+<div id="common-problems" class="section level2">
+<h2><span class="header-section-number">6.5</span> Common problems</h2>
+<p>…</p>
+</div>
+<div id="coordinate-systems" class="section level2">
+<h2><span class="header-section-number">6.6</span> Coordinate systems</h2>
+<div id="your-turn-3" class="section level3">
+<h3><span class="header-section-number">6.6.1</span> Your turn</h3>
+</div>
+</div>
+<div id="the-layered-grammar-of-graphics" class="section level2">
+<h2><span class="header-section-number">6.7</span> The Layered Grammar of Graphics</h2>
+</div>
+<div id="plotly" class="section level2">
+<h2><span class="header-section-number">6.8</span> Plotly?</h2>
+</div>
+<div id="troubleshooting-2" class="section level2">
+<h2><span class="header-section-number">6.9</span> Troubleshooting</h2>
 
 </div>
 </div>
@@ -328,8 +316,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="github-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wrangling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
